@@ -13,6 +13,7 @@ function headerOneColumn($title, $obsah) {
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         -->
         <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/burger-menu.css">
         <link rel="stylesheet" href="/css/custom.css">
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -47,14 +48,14 @@ function headerOneColumn($title, $obsah) {
         <div id="page">
             <div id="darker"></div>
             <div class="container flex flex-column center">
-                <header class="flex padding-lr-25 padding-top-10" id="header">
-                    <div>
+                <header class="flex flex_align--center padding-25" id="header">
+                    <div class="margin_right--auto" id="logo">
                         <a href="/">
-                            <img class="inline-block-center" id="logo" src="img/tomas-vykoukal.png" alt="Tomáš Vykoukal">
+                            <img class="inline-block-center" src="img/tomas-vykoukal.png" alt="Tomáš Vykoukal">
                             <h1 class="inline-block-center">Tomáš Vykoukal</h1>
                         </a>
                     </div>
-                    <div class="flex flex-1 flex-right padding-lr-25" id="menu-toogle" >
+                    <div class="padding-lr-25" id="menu-toogle" >
                         <div id="nav-icon3">
                             <span></span>
                             <span></span>
@@ -63,7 +64,7 @@ function headerOneColumn($title, $obsah) {
                         </div>
                     </div>
                 </header>
-                <article class="row margin-topbottom--auto padding-25" id="main-content-front">
+                <article class="row margin_left-right--auto margin_top-bottom--auto padding-25" id="main-content-front">
                         <?php echo $obsah; ?>
                 </article>
                 <footer class="padding-lr-25" role="contentinfo">
