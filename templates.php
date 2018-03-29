@@ -25,7 +25,6 @@ function headerOneColumn($title, $obsah) {
 
                 $("#darker").click(function(){
                     $("body").removeClass("sidemenu--open");
-                    $("#nav-icon3").removeClass("open");
                 });
             });
         </script>
@@ -46,7 +45,6 @@ function headerOneColumn($title, $obsah) {
         </nav>
 
         <div id="page">
-            <div id="darker"></div>
             <div class="container flex flex-column center">
                 <header class="flex flex_align--center padding-25" id="header">
                     <div class="margin_right--auto" id="logo">
@@ -86,13 +84,6 @@ function headerOneColumn($title, $obsah) {
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.6'><\/script>".replace("HOST", location.hostname));
      //]]>
     </script>-->
-    <script>
-        $(document).ready(function(){
-        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-            $(this).toggleClass('open');
-        });
-        });
-    </script>
     </body>
     </html>
     <?php

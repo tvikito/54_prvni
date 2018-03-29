@@ -8,7 +8,11 @@ html {
 
 body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+
+  background: url(/img/cesta.jpg) center no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
@@ -26,13 +30,6 @@ a {
 
 #page {
   height: 100%;
-  overflow: auto;
-
-  background: url(/img/cesta.jpg) center no-repeat;
-  background-size: cover;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-
-  transition: 0.3s all ease-in-out;
 
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -66,26 +63,29 @@ a {
 }
 
 .sidemenu--open #page {
-  -moz-transform: translateX(-249px);
-  -ms-transform: translateX(-249px);
-  -o-transform: translateX(-249px);
-  -webkit-transform: translateX(-249px);
-  transform: translateX(-249px);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 
-  -moz-transform: translateZ(0) translateX(-249px);
-  -ms-transform: translateZ(0) translateX(-249px);
-  -o-transform: translateZ(0) translateX(-249px);
-  -webkit-transform: translateZ(0) translateX(-249px);
-  transform: translateZ(0) translateX(-249px);
+  -moz-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
 
-  -moz-transform: translate3d(-249px, 0, 0);
-  -ms-transform: translate3d(-249px, 0, 0);
-  -o-transform: translate3d(-249px, 0, 0);
-  -webkit-transform: translate3d(-249px, 0, 0);
-  transform: translate3d(-249px, 0, 0);
+  -moz-transform: translateZ(0) translateX(-100px);
+  -ms-transform: translateZ(0) translateX(-100px);
+  -o-transform: translateZ(0) translateX(-100px);
+  -webkit-transform: translateZ(0) translateX(-100px);
+  transform: translateZ(0) translateX(-100px);
+
+  -moz-transform: translate3d(-100px, 0, 0);
+  -ms-transform: translate3d(-100px, 0, 0);
+  -o-transform: translate3d(-100px, 0, 0);
+  -webkit-transform: translate3d(-100px, 0, 0);
+  transform: translate3d(-100px, 0, 0);
 }
 
-#darker {
+.sidemenu--open #page:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -98,11 +98,6 @@ a {
   opacity: 0;
 
   transition: 0.3s all ease-in-out;
-}
-
-.sidemenu--open #darker {
-  visibility: visible;
-  opacity: 1;
 }
 
 #header {
@@ -122,22 +117,29 @@ a {
 }
 
 #menu {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   display: flex;
-  z-index: -1;
+  z-index: 2;
   flex-direction: column;
-  visibility: hidden;
   transition: 0.3s all;
+
+  -webkit-transform: translate3d(301px,0,0);
+  transform: translate3d(301px,0,0);
 
   overflow: auto;
   height: 100%;
-  width: 250px;
+  width: 301px;
   padding: 25px;
   background: rgba(0,0,0,0.8);
 
   justify-content: center;
+}
+
+.sidemenu--open #menu {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 #menu ul {
@@ -154,11 +156,6 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
-}
-
-.sidemenu--open #menu {
-  visibility: visible;
-  z-index: 0;
 }
 
 #menu-toogle {
