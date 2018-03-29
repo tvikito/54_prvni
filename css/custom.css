@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: rgba(85, 196, 94,0.5);
+}
+
 ::selection {
   color: #fff;
   background: rgba(85, 196, 94,0.5);
@@ -12,8 +17,6 @@ html {
 }
 
 body {
-  height: 100%;
-  height: 100%;
   height: 100%;
   overflow: hidden;
 
@@ -39,35 +42,35 @@ a {
   background-size: cover;
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  -moz-transform:     translateX(0);
+  -ms-transform:      translateX(0);
+  -o-transform:       translateX(0);
+  -webkit-transform:  translateX(0);
+  transform:          translateX(0);
 
-  -moz-transform: translateZ(0) translateX(0);
-  -ms-transform: translateZ(0) translateX(0);
-  -o-transform: translateZ(0) translateX(0);
-  -webkit-transform: translateZ(0) translateX(0);
-  transform: translateZ(0) translateX(0);
+  -moz-transform:     translateZ(0) translateX(0);
+  -ms-transform:      translateZ(0) translateX(0);
+  -o-transform:       translateZ(0) translateX(0);
+  -webkit-transform:  translateZ(0) translateX(0);
+  transform:          translateZ(0) translateX(0);
 
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -moz-transform:     translate3d(0, 0, 0);
+  -ms-transform:      translate3d(0, 0, 0);
+  -o-transform:       translate3d(0, 0, 0);
+  -webkit-transform:  translate3d(0, 0, 0);
+  transform:          translate3d(0, 0, 0);
 
-  -moz-transition: 300ms ease all;
-  -ms-transition: 300ms ease all;
-  -o-transition: 300ms ease all;
+  -moz-transition:    300ms ease all;
+  -ms-transition:     300ms ease all;
+  -o-transition:      300ms ease all;
   -webkit-transition: 300ms ease all;
-  transition: 300ms ease all;
+  transition:         300ms ease all;
 
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -moz-backface-visibility:     hidden;
+  -ms-backface-visibility:      hidden;
+  -o-backface-visibility:       hidden;
+  -webkit-backface-visibility:  hidden;
+  backface-visibility:          hidden;
 }
 
 @media (max-height: 479px) {
@@ -109,23 +112,23 @@ a {
 .sidemenu--open #page {
   overflow: hidden;
 
-  -moz-transform: translateX(-249px);
-  -ms-transform: translateX(-249px);
-  -o-transform: translateX(-249px);
-  -webkit-transform: translateX(-249px);
-  transform: translateX(-249px);
+  -moz-transform:     translateX(-249px);
+  -ms-transform:      translateX(-249px);
+  -o-transform:       translateX(-249px);
+  -webkit-transform:  translateX(-249px);
+  transform:          translateX(-249px);
 
-  -moz-transform: translateZ(0) translateX(-249px);
-  -ms-transform: translateZ(0) translateX(-249px);
-  -o-transform: translateZ(0) translateX(-249px);
-  -webkit-transform: translateZ(0) translateX(-249px);
-  transform: translateZ(0) translateX(-249px);
+  -moz-transform:     translateZ(0) translateX(-249px);
+  -ms-transform:      translateZ(0) translateX(-249px);
+  -o-transform:       translateZ(0) translateX(-249px);
+  -webkit-transform:  translateZ(0) translateX(-249px);
+  transform:          translateZ(0) translateX(-249px);
 
-  -moz-transform: translate3d(-249px, 0, 0);
-  -ms-transform: translate3d(-249px, 0, 0);
-  -o-transform: translate3d(-249px, 0, 0);
-  -webkit-transform: translate3d(-249px, 0, 0);
-  transform: translate3d(-249px, 0, 0);
+  -moz-transform:     translate3d(-249px, 0, 0);
+  -ms-transform:      translate3d(-249px, 0, 0);
+  -o-transform:       translate3d(-249px, 0, 0);
+  -webkit-transform:  translate3d(-249px, 0, 0);
+  transform:          translate3d(-249px, 0, 0);
 }
 
 #darker {
@@ -284,10 +287,10 @@ a {
 }
 
 .flex-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient:     vertical;
+  -webkit-box-direction:  normal;
+  -ms-flex-direction:     column;
+  flex-direction:         column;
 }
 
 .flex-end {
