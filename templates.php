@@ -163,7 +163,7 @@ function template_contact($title, $obsah) {
                         <?php echo $obsah; ?>
                     </article>
 
-                    <footer class="padding-10" role="contentinfo">
+                    <footer class="padding-15" role="contentinfo">
                         <p>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</p>
                     </footer>
                 </div>
