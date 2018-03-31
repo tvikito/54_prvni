@@ -26,7 +26,6 @@ function template_home($title, $obsah) {
 
                     $("#darker").click(function(){
                         $("body").removeClass("sidemenu--open");
-                        $("#nav-icon3").removeClass("open");
                     });
                 });
             </script>
@@ -47,11 +46,11 @@ function template_home($title, $obsah) {
                 </ul>
             </nav>
 
-            <div id="page">
+            <div id="page" class="h-100 flex flex-column center">
                 <div id="darker"></div>
-                <div class="container h-100 flex flex-column center">
 
-                    <header class="sm-d-flex flex_align--center padding-15" id="header">
+                <header class="sm-d-flex flex_align--center padding-15" id="header-bar">
+                    <div class="container">
                         <div class="margin_right--auto padding-tb-10" id="logo">
                             <a href="/">
                                 <img class="inline-block-center" src="img/tomas-vykoukal.png" alt="Tomáš Vykoukal">
@@ -66,16 +65,20 @@ function template_home($title, $obsah) {
                                 <span></span>
                             </div>
                         </div>
-                    </header>
+                    </div>
+                </header>
 
+                <div class="container">
                     <article class="row margin_left-right--auto margin_top-bottom--auto padding-15 padding-tb-20" id="main-content-front">
                         <?php echo $obsah; ?>
                     </article>
-
-                    <footer class="padding-10" role="contentinfo">
-                        <p>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</p>
-                    </footer>
                 </div>
+
+                <footer class="padding-10" role="contentinfo">
+                    <div class="container">
+                        <p>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</p>
+                    </div>
+                </footer>
             </div>
 
             <script>
@@ -168,15 +171,6 @@ function template_contact($title, $obsah) {
                     </footer>
                 </div>
             </div>
-
-            <script>
-                $(document).ready(function(){
-                $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-                    $(this).toggleClass('open');
-                });
-                });
-            </script>
-
         </body>
     </html>
     <?php
