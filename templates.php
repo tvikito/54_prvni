@@ -1,6 +1,6 @@
 <?php
 
-function template_head($title) { ?>
+function template_head($title = null, $desc = null) { ?>
 
 <!DOCTYPE html>
     <html lang="cs">
@@ -21,6 +21,13 @@ function template_head($title) { ?>
             <meta name="msapplication-TileColor" content="#603cba">
             <meta name="msapplication-config" content="/favicons/browserconfig.xml">
             <meta name="theme-color" content="#ffffff">
+
+            <meta property="og:image" content="/img/og-image.jpg">
+            <meta property="og:image:width" content="279">
+            <meta property="og:image:height" content="279">
+            <meta property="og:title" content="<?php $title ?> - Tomas Vykoukal">
+            <meta property="og:description" content="<?php echo $desc ?>">
+            <meta property="og:url" content="<?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?>">
 
             <link rel="stylesheet" href="/css/normalize.css">
             <link rel="stylesheet" href="/css/burger-menu.css">
@@ -43,7 +50,7 @@ function template_head($title) { ?>
 
 <?php }
 
-function template_body($obsah) { ?>
+function template_body($obsah = null) { ?>
 
         <body>
             <nav id="menu" role="navigation">
@@ -67,7 +74,7 @@ function template_body($obsah) { ?>
                     <header class="sm-d-flex flex_align--center padding-15" id="header">
                         <div class="margin_right--auto padding-tb-10" id="logo">
                             <a href="/">
-                                <img class="inline-block-center" src="img/tomas-vykoukal.png" alt="Tomáš Vykoukal">
+                                <img class="inline-block-center" src="/img/tomas-vykoukal.png" alt="Tomáš Vykoukal">
                                 <h1 class="inline-block-center">Tomáš Vykoukal</h1>
                             </a>
                         </div>
@@ -81,9 +88,11 @@ function template_body($obsah) { ?>
                         </div>
                     </header>
 
-                    <article class="row margin_left-right--auto margin_top-bottom--auto padding-15 padding-tb-20" id="main-content-front">
-                        <?php echo $obsah; ?>
-                    </article>
+                    <section class="row margin_left-right--auto margin_top-bottom--auto padding-15 padding-tb-20" id="main-content-front">
+                        <article>
+                            <?php echo $obsah; ?>
+                        </article>
+                    </section>
 
                     <?php template_footer(); ?>
                 </div>
@@ -96,7 +105,7 @@ function template_body($obsah) { ?>
 function template_footer() { ?>
 
     <footer class="padding-10" role="contentinfo">
-        <p>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</p>
+        <p><small>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</small></p>
         <p><?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?></p>
     </footer>
 
