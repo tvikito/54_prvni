@@ -1,7 +1,6 @@
 <?php
 
-function template_home($title, $obsah) {
-    ?>
+function template_home($title, $obsah) { ?>
 
     <!DOCTYPE html>
     <html lang="cs">
@@ -12,6 +11,16 @@ function template_home($title, $obsah) {
             <meta name="theme-color" content="#4285f4">
 
             <title><?php echo $title ?></title>
+
+            <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+            <link rel="manifest" href="/favicons/site.webmanifest">
+            <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#603cba">
+            <link rel="shortcut icon" href="/favicons/favicon.ico">
+            <meta name="msapplication-TileColor" content="#603cba">
+            <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+            <meta name="theme-color" content="#ffffff">
 
             <link rel="stylesheet" href="/css/normalize.css">
             <link rel="stylesheet" href="/css/burger-menu.css">
@@ -74,6 +83,7 @@ function template_home($title, $obsah) {
 
                     <footer class="padding-10" role="contentinfo">
                         <p>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</p>
+                        <p><?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?></p>
                     </footer>
                 </div>
             </div>

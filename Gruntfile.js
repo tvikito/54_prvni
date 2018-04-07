@@ -17,9 +17,17 @@ module.exports = function(grunt) {
     less: {
         development: {
             options: {
-                paths: ["less/"]
+                compress: true,
+                yuicompress: true,
+                optimization: 2,
+                sourceMap: true,
+                sourceMapFilename: 'css/main.css.map', // where file is generated and located
+                sourceMapURL: '/main.css.map', // the complete url and filename put in the compiled css file
+                sourceMapBasepath: 'css', // Sets sourcemap base path, defaults to current working directory.
+                sourceMapRootpath: '/', // adds this path onto the sourcemap filename and less file paths
             },
             files: {
+                "css/styles.css" : "css/_css/styles.less",
                 "css/styles.css" : "css/_css/styles.less"
             }
         }
