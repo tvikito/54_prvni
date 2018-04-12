@@ -85,15 +85,13 @@ function template_head($title = null, $desc = null) { ?>
                     </header>
 
                     <section class="row margin_left-right--auto margin_top-bottom--auto padding-15 padding-tb-20" id="main-content-front">
-
 <?php }
 
 function template_footer() { ?>
                     </section>
 
                     <footer class="padding-10" role="contentinfo">
-                        <p><small>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</small></p>
-                        <p><?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?></p>
+                        <p><small>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma<br>by <abbr title="papa means Italian father">papa</abbr> Tomas</small></p>
                     </footer>
                 </div>
             </div>
