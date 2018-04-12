@@ -48,10 +48,6 @@ function template_head($title = null, $desc = null) { ?>
             </script>
         </head>
 
-<?php }
-
-function template_body($obsah = null) { ?>
-
         <body>
             <nav id="menu" role="navigation">
                 <ul>
@@ -63,7 +59,7 @@ function template_body($obsah = null) { ?>
                             <li><a href="/about/address">Our address</a></li>
                         </ul>
                     </li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/contact.php">Contact</a></li>
                 </ul>
             </nav>
 
@@ -89,24 +85,18 @@ function template_body($obsah = null) { ?>
                     </header>
 
                     <section class="row margin_left-right--auto margin_top-bottom--auto padding-15 padding-tb-20" id="main-content-front">
-                        <article>
-                            <?php echo $obsah; ?>
-                        </article>
+
+<?php }
+
+function template_footer() { ?>
                     </section>
 
-                    <?php template_footer(); ?>
+                    <footer class="padding-10" role="contentinfo">
+                        <p><small>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</small></p>
+                        <p><?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?></p>
+                    </footer>
                 </div>
             </div>
         </body>
     </html>
-    <?php
-}
-
-function template_footer() { ?>
-
-    <footer class="padding-10" role="contentinfo">
-        <p><small>© <?php echo date("Y"); ?> created with my youngest sister and oldest grandma by <abbr title="papa means Italian father">papa</abbr> Tomas</small></p>
-        <p><?php echo parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?></p>
-    </footer>
-
 <?php }
